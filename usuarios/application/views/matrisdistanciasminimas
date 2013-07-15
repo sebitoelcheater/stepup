@@ -1,0 +1,36 @@
+N=8 %numero de nodos
+arcos=[1 3 1   %arcos=[nodo nodo distancia]
+	   1 4 3
+	   2 4 1
+	   2 3 3
+	   3 1 1
+	   3 2 3
+	   3 4 1
+	   3 6 10
+	   4 1 3
+	   4 2 1
+	   5 7 10
+	   6 2 1];
+
+a=inf(N,N); % a(nodo1,nodo2) = distancia entre nodo1 y nodo2
+for i=length(arcos(:,1))
+		a(arcos(i,1),arcos(i,2))=arcos(i,3); 
+end
+
+
+for n1=1:(N-1) %nodo inicial
+	for n2=(n1+1):N
+		if a(n1,n2)!=inf | a(n2,n1)!=inf
+			dm(n1,n2)=(dijtra(n1,n2)+dijtra(n2,n1))/2
+			dm(n2,n1)=dm(n1,n2)
+		else
+			dm(n1,n2)=min(a(n1,n2),a(n2,n1))
+			dm(n2,n1)=dm(n1,n2)
+	end
+end
+
+
+		
+
+
+
