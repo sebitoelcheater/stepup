@@ -1,0 +1,8 @@
+[09-Jul-2013 11:59:53 America/Santiago] PHP Fatal error:  Call to undefined method Contenido::getContainer() in /home/cheaperc/public_html/stepup/admin/application/controllers/main.php on line 26
+[09-Jul-2013 12:08:55 America/Santiago] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cheaperc/public_html/stepup/admin/application/views/main.php on line 8
+[09-Jul-2013 12:08:58 America/Santiago] PHP Fatal error:  Cannot use object of type stdClass as array in /home/cheaperc/public_html/stepup/admin/application/views/main.php on line 8
+[09-Jul-2013 12:11:11 America/Santiago] PHP Parse error:  syntax error, unexpected T_LNUMBER, expecting T_STRING or T_VARIABLE or '{' or '$' in /home/cheaperc/public_html/stepup/admin/application/views/main.php on line 7
+[09-Jul-2013 12:13:35 America/Santiago] PHP Parse error:  syntax error, unexpected T_LNUMBER, expecting T_STRING or T_VARIABLE or '{' or '$' in /home/cheaperc/public_html/stepup/admin/application/views/main.php on line 7
+[09-Jul-2013 12:14:49 America/Santiago] PHP Fatal error:  Call to a member function row() on a non-object in /home/cheaperc/public_html/stepup/admin/application/views/main.php on line 7
+[09-Jul-2013 12:15:06 America/Santiago] PHP Fatal error:  Call to a member function row() on a non-object in /home/cheaperc/public_html/stepup/admin/application/views/main.php on line 7
+[09-Jul-2013 13:21:43 America/Santiago] PHP Fatal error:  Call to undefined function show_main() in /home/cheaperc/public_html/stepup/admin/application/controllers/main.php on line 59

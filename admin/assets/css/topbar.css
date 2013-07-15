@@ -1,0 +1,33 @@
+body {
+	padding-top:50px;
+}
+
+#top-bar-bg {
+	/*Sombra*/
+	-moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.5);
+	/*Fondo en gradiente*/    
+	background:-moz-linear-gradient(center top , #333333, #111111) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, center top, center bottom, from(#333333), to(#111111), color-stop(0.5, #111111), color-stop(0.5, #111111));
+	/*Altura y margen interno*/
+	height:20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: left;
+	/*Fija*/
+	position: fixed;
+	top:0px;
+	left:0px;
+	right:0px;
+	color: #b5c0c0;
+	font-size: 14px;
+	/*Capa, sobre todo*/
+	z-index:999999;
+}
+
+.icon-share {
+  background-position: -120px -72px;
+}
+

@@ -1,0 +1,5 @@
+[09-Jul-2013 01:58:37 America/Santiago] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, array given in /home/cheaperc/public_html/stepup/content/index.php on line 19
+[09-Jul-2013 02:00:55 America/Santiago] PHP Parse error:  syntax error, unexpected T_AS, expecting ';' in /home/cheaperc/public_html/stepup/content/index.php on line 15
+[09-Jul-2013 02:01:59 America/Santiago] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ';' in /home/cheaperc/public_html/stepup/content/index.php on line 17
+[09-Jul-2013 02:02:12 America/Santiago] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ';' in /home/cheaperc/public_html/stepup/content/index.php on line 17
+[09-Jul-2013 02:02:15 America/Santiago] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ';' in /home/cheaperc/public_html/stepup/content/index.php on line 17
