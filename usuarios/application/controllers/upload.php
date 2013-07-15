@@ -15,7 +15,7 @@ class Upload extends CI_Controller {
 
 	function do_upload()
 	{
-		$config['upload_path'] = base_url().'/uploads/';
+		$config['upload_path'] = 'uploads/';
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '100';
 		$config['max_width']  = '1024';
@@ -26,6 +26,7 @@ class Upload extends CI_Controller {
 		if ( ! $this->upload->do_upload())
 		{
 			$error = array('error' => $this->upload->display_errors());
+			$error['upload_path'] = base_url().'uploads/';
 
 			$this->load->view('upload_form', $error);
 		}
