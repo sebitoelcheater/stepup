@@ -49,9 +49,10 @@ class Inicio extends CI_Controller {
 
     function show_login( $show_error = 0 ) {
         $data['error'] = $show_error;
-        $this->load->view('header');
-        $this->load->view('topbar_logued_out');
-		$this->load->view('signin');
+        //$this->load->view('header');
+        //$this->load->view('topbar_logued_out');
+		//$this->load->view('signin');
+		header('Location: logued_out/Step');
     }
 
     function logout_user() {
