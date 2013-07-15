@@ -18,4 +18,3 @@
 
 </body>
 </html>
-aweonao<?=$upload_path?>
