@@ -1,15 +1,18 @@
 <?php
+/*
 $mail = $_POST["mail"];
 $pass = $_POST["password"];
-
+*/
+$mail="";
+$pass = "";
 $mysqli = new mysqli('localhost', 'cheaperc_user1', 'pko2RWu', 'cheaperc_database90336247');
+//$mysqli = new mysqli('localhost', 'root', 'pko2RWu', 'test');
 
 /* check connection */
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
-
 $stmt = $mysqli->prepare("SELECT password FROM step_usuario WHERE mail=?");
 $stmt->bind_param('s', $sample);   // bind $sample to the parameter
 
