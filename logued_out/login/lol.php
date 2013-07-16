@@ -25,7 +25,7 @@ $stmt->bind_result($returned_name);
 
 
 while($stmt->fetch()){
-    $elNumber=$returned_name;
+    $password=$returned_name;
 }
 
 
@@ -36,7 +36,7 @@ $stmt->close();
 /* close connection */
 $mysqli->close();
 
-    if($password==$pass){
+    if($password!=$pass || $mail!="" || $password!=""){
         echo 1;
     }
     else {
