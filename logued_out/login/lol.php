@@ -1,5 +1,6 @@
 <?php
-$ticket = $_POST["ticket"];
+$mail = $_POST["mail"];
+$pass = $_POST["password"];
 
 $mysqli = new mysqli('localhost', 'cheaperc_user1', 'pko2RWu', 'cheaperc_database90336247');
 
@@ -9,12 +10,12 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-$stmt = $mysqli->prepare("SELECT ticket FROM Tickets WHERE ticket=?");
+$stmt = $mysqli->prepare("SELECT password FROM step_usuario WHERE mail=?");
 $stmt->bind_param('s', $sample);   // bind $sample to the parameter
 
 // escape the POST data for added protection
-$sample = isset($ticket)
-          ? $mysqli->real_escape_string($ticket)
+$sample = isset($mail)
+          ? $mysqli->real_escape_string($mail)
           : '';
 
 // execute prepared statement 
@@ -35,7 +36,7 @@ $stmt->close();
 /* close connection */
 $mysqli->close();
 
-    if((int)$elNumber==(int)$ticket){
+    if($password==$pass){
         echo 1;
     }
     else {

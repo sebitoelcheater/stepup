@@ -9,13 +9,17 @@
 <script data-main="scripts/main" src="jQuery/jQuery.js"></script>
 <script src="http://fgnass.github.io/spin.js/dist/spin.min.js"></script>
 <script>
-$('input[name=commit]').click(function() {
- if($('input[name=ticket1]').val().length==4){
+
+$(document).ready(function() {
+  $('input[name=commit]').click(myFunction);
+});
+function myFunction() {
+ if(true){
  
         $.ajax({
             type: "POST",
             url: "lol.php",
-            data: "ticket="+$('input[name=ticket1]').val(),
+            data: "mail="+$('input[name=mail]').val()+"&password="+$('input[name=password]').val(),
             beforeSend: function(){
               var opts = {
                   lines: 10, // The number of lines to draw
@@ -35,8 +39,8 @@ $('input[name=commit]').click(function() {
                   top: 'auto', // Top position relative to parent in px
                   left: 'auto' // Left position relative to parent in px
                 };
-var target = document.getElementById('msgUsuario');
-var spinner = new Spinner(opts).spin(target);
+            var target = document.getElementById('msgUsuario');
+            var spinner = new Spinner(opts).spin(target);
             },
             success: function( respuesta ){
               $('#msgUsuario').empty();
@@ -49,7 +53,7 @@ var spinner = new Spinner(opts).spin(target);
     } else {
       $('input[name=ticket1]').css("background","white");
     }
-});
+}
 
 </script>
   <meta charset="utf-8">
@@ -62,8 +66,9 @@ var spinner = new Spinner(opts).spin(target);
   <section class="container">
     <div class="login">
       <h1>Step Up</h1>
+      <div id="msgUsuario"></div>
       <form>
-        <p><input type="text" name="ticket1" value="" placeholder="Email"></p>
+        <p><input type="text" name="mail" value="" placeholder="Email"></p>
         <p><input type="password" name="password" value="" placeholder="Contraseña"></p>
         <p class="remember_me">
           <label>
@@ -76,7 +81,7 @@ var spinner = new Spinner(opts).spin(target);
     </div>
 
     <div class="login-help">
-      <p>¿Olvidaste tu contraseña? <a href="index.html">Click aquí para recuperarla</a>.</p>
+      <p>¿Olvidaste tu contraseña? <a href="#">Click aquí para recuperarla</a>.</p>
     </div>
   </section>
 </body>
