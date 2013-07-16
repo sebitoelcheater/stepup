@@ -1,0 +1,5 @@
+<link rel="stylesheet" type="text/css" href="../shadow/shadowbox.css">
+<script type="text/javascript" src="../shadow/shadowbox.js"></script>
+<script type="text/javascript">
+Shadowbox.init();
+</script>
