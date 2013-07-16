@@ -36,7 +36,7 @@ $stmt->close();
 /* close connection */
 $mysqli->close();
 
-    if($password!=$pass || $mail!="" || $password!=""){
+    if($password!=$pass){
         echo 1;
     }
     else {
