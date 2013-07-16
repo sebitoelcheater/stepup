@@ -21,7 +21,7 @@
           <li><a href="index.html" class="icon tasks">Entregas <span>3</span></a></li>
           <li><a href="index.html" class="icon tasks">Encuestas <span>3</span></a></li>
           <li><a href="index.html" class="icon settings">Configuración </a></li>
-          <li><a href="logout_user">Cerrar Sesión </a></li>
+          <li><a href="index.php/inicio/logout_user">Cerrar Sesión </a></li>
 
         </ul>
       </nav>
