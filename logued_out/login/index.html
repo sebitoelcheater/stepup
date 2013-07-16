@@ -44,7 +44,7 @@ function myFunction() {
             success: function( respuesta ){
               $('#msgUsuario').empty();
               if(respuesta == '1')
-                $('input[name=mail]').css("background","#FF4500");
+                window.location.replace("../../");
               else
                 $('input[name=mail]').css("background","#66FF00");
             }
