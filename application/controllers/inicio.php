@@ -28,8 +28,10 @@ class Inicio extends CI_Controller {
 	public function index()
 	{
 		//$session_id = $this->session->userdata('session_id');
-		if($this->session->userdata('logueado'))
-			redirect('/main/show_main');
+		if($this->session->userdata('logueado')){
+			$this->load->view("topbar");
+            $this->load->view("main");
+		}
 		else if ($this->input->post('accion')=="login"){
 			$mail = $this->input->post('mail');
 			$password = $this->input->post('password');
