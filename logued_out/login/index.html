@@ -44,9 +44,11 @@ function myFunction() {
             success: function( respuesta ){
               $('#msgUsuario').empty();
               if(respuesta == '1')
-                window.location.replace("../../");
-              else
-                $('input[name=mail]').css("background","#66FF00");
+                $('#login').submit();
+              else{
+                $('input[name=mail]').css("background","#FF0000");
+                $('input[name=password]').css("background","#FF0000");
+              }
             }
         });
 }
@@ -63,14 +65,17 @@ function myFunction() {
     <div class="login">
       <h1>Step Up</h1>
       <div id="msgUsuario"></div>
-      <form>
+      <form action="../../" method="POST" id="login">
         <p><input type="text" name="mail" value="" placeholder="Email"></p>
         <p><input type="password" name="password" value="" placeholder="Contraseña"></p>
+        <input type="hidden" name="acceso" value="login">
         <p class="remember_me">
+          <!--
           <label>
             <input type="checkbox" name="remember_me" id="remember_me">
             Recuérdame.
           </label>
+        -->
         </p>
       </form>
         <p class="submit"><input type="submit" name="commit" value="Iniciar Sesión"></p>
