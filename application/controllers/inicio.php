@@ -30,7 +30,7 @@ class Inicio extends CI_Controller {
 		//$session_id = $this->session->userdata('session_id');
 		if($this->session->userdata('logueado'))
 			redirect('/main/show_main');
-		else if ($this->input->post('accion')=="loguearse")
+		else if ($this->input->post('accion')=="login")
 			$this->$this->load->view("main");
 		else
 			$this->show_login();
