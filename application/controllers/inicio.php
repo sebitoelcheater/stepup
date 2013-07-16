@@ -64,10 +64,15 @@ class Inicio extends CI_Controller {
       $this->index();
     }
 
-    function main(){
+    function main($content='home'){
     	if($this->session->userdata('logueado')==true){
-	    	$this->load->view("topbar");
-	        $this->load->view("main");
+    		$this->load->model('usuario');
+			$data = $this->usuario->fill_session_data();
+			$header['actived']=$content;
+			$data['aviso'] = $aviso;
+			$this->load->view('header',$header);
+	    	$this->load->view("topbar",$data);
+	        $this->load->view("main",$data);
     	}
     	else
     		$this->show_login();

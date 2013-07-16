@@ -13,7 +13,7 @@
 <body>
   <header>
     <div class="container">
-      <h1><a href="index.html">Bienvenido, </a></h1>
+      <h1><a href="index.html">Bienvenido, <?=$nombre?> <?=$apellido?></a></h1>
       <nav>
         <ul>
           <li><a href="index.html" class="icon tasks">Inicio <span>3</span></a></li>
