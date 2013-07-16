@@ -61,6 +61,6 @@ class Usuario extends CI_Model {
       $data['mail'] = $userData['mail'];
       $data['password'] = $userData['password'];
 
-      return $this->db->insert('user',$data);
+      return $this->db->insert('step_usuario',$data);
     }
 }
