@@ -54,7 +54,8 @@ class Inicio extends CI_Controller {
         //$this->load->view('header');
         //$this->load->view('topbar_logued_out');
 		//$this->load->view('signin');
-		header('Location: logued_out/Step');
+		$base_url = base_url();
+		header('Location: '.$base_url.'logued_out/Step');
     }
 
     function logout_user() {
