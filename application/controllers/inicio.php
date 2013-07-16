@@ -45,7 +45,7 @@ class Inicio extends CI_Controller {
 	      $saved = $this->usuario->new_user($userInfo);
 	    }
 	    if ( isset($saved) && $saved ) {
-	       $this->login_user($userInfo['mail']),$userInfo['password'];
+	       $this->login_user($userInfo['mail'],$userInfo['password']);
 	    }
     }
 
