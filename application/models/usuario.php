@@ -35,10 +35,10 @@ class Usuario extends CI_Model {
     function set_session() {
         $this->session->set_userdata( array(
           'id'=>$this->details->id,
-          'nombre'=>$this->details->username,
-          'apellido'=>$this->details->password,
-          'mail'=>$this->details->nombre,
-          'imagen'=>$this->details->apellido,
+          'nombre'=>$this->details->nombre,
+          'apellido'=>$this->details->apellido,
+          'mail'=>$this->details->mail,
+          'imagen'=>$this->details->imagen,
           'logueado'=>true
           )
         );
@@ -47,10 +47,10 @@ class Usuario extends CI_Model {
     function fill_session_data(){
       $data=array();
       $data['id'] = $this->session->userdata('id');
-      $data['nombre'] = $this->session->userdata('username');
-      $data['apellido'] = $this->session->userdata('password');
-      $data['mail'] = $this->session->userdata('nombre');
-      $data['imagen'] = $this->session->userdata('apellido');
+      $data['nombre'] = $this->session->userdata('nombre');
+      $data['apellido'] = $this->session->userdata('apellido');
+      $data['mail'] = $this->session->userdata('mail');
+      $data['imagen'] = $this->session->userdata('imagen');
       $data['logueado'] = $this->session->userdata('logueado');
       return $data;
     }
