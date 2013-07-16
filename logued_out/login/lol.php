@@ -1,10 +1,8 @@
 <?php
-/*
+
 $mail = $_POST["mail"];
 $pass = $_POST["password"];
-*/
-$mail="";
-$pass = "";
+
 $mysqli = new mysqli('localhost', 'cheaperc_user1', 'pko2RWu', 'cheaperc_database90336247');
 //$mysqli = new mysqli('localhost', 'root', 'pko2RWu', 'test');
 
@@ -39,7 +37,7 @@ $stmt->close();
 /* close connection */
 $mysqli->close();
 
-    if($password!=$pass){
+    if($password==$pass & $mail!="" & $pass!=""){
         echo 1;
     }
     else {
