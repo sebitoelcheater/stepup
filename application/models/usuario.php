@@ -54,4 +54,13 @@ class Usuario extends CI_Model {
       $data['logueado'] = $this->session->userdata('logueado');
       return $data;
     }
+
+    function new_user($userData){
+      $data['nombre'] = $userData['nombre'];
+      $data['apellido'] = $userData['apellido'];
+      $data['mail'] = $userData['mail'];
+      $data['password'] = $userData['password'];
+
+      return $this->db->insert('user',$data);
+    }
 }

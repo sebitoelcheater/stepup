@@ -2,22 +2,6 @@
 
 class Inicio extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
-
 	function __construct(){
 		parent::__construct();
 		$this->load->library('session');
@@ -28,11 +12,15 @@ class Inicio extends CI_Controller {
 	public function index()
 	{
 		//$session_id = $this->session->userdata('session_id');
-		if($this->session->userdata('logueado')){
-			$this->load->view("topbar");
-            $this->load->view("main");
+		if($this->session->userdata('logueado')==true){
+			$this->main();
 		}
 		else if ($this->input->post('accion')=="login"){
+			$mail = $this->input->post('mail');
+			$password = $this->input->post('password');
+			$this->login_user($mail,$password);
+		}
+		else if ($this->input->post('accion')=="registrar"){
 			$mail = $this->input->post('mail');
 			$password = $this->input->post('password');
 			$this->login_user($mail,$password);
@@ -44,12 +32,21 @@ class Inicio extends CI_Controller {
 	function login_user($mail,$password) {
         $this->load->model('usuario');
 
-        if($this->usuario->validate_user($mail,$password)){
-            $this->load->view("topbar");
-            $this->load->view("main");
-        }
+        if($this->usuario->validate_user($mail,$password))
+            $this->main();
         else
             $this->show_login(1);
+    }
+
+    function new_user(){
+    	$userInfo = $this->input->post(null,true);
+	    if( count($userInfo) ) {
+	      $this->load->model('usuario');
+	      $saved = $this->usuario->new_user($userInfo);
+	    }
+	    if ( isset($saved) && $saved ) {
+	       $this->login_user($userInfo['mail']),$userInfo['password'];
+	    }
     }
 
     function show_login( $show_error = 0 ) {
@@ -65,8 +62,14 @@ class Inicio extends CI_Controller {
       $this->session->set_userdata( array("logueado"=>false));
       $this->index();
     }
+
+    function main(){
+    	if($this->session->userdata('logueado')==true){
+	    	$this->load->view("topbar");
+	        $this->load->view("main");
+    	}
+    	else
+    		$this->show_login();
+    }
     
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
