@@ -21,9 +21,7 @@ class Inicio extends CI_Controller {
 			$this->login_user($mail,$password);
 		}
 		else if ($this->input->post('accion')=="registrar"){
-			$mail = $this->input->post('mail');
-			$password = $this->input->post('password');
-			$this->login_user($mail,$password);
+			$this->new_user();
 		}
 		else
 			$this->show_login();
@@ -39,14 +37,16 @@ class Inicio extends CI_Controller {
     }
 
     function new_user(){
-    	$userInfo = $this->input->post(null,true);
-	    if( count($userInfo) ) {
-	      $this->load->model('usuario');
-	      $saved = $this->usuario->new_user($userInfo);
-	    }
-	    if ( isset($saved) && $saved ) {
-	       $this->login_user($userInfo['mail'],$userInfo['password']);
-	    }
+    	if ($this->input->post('accion')=="registrar"){
+	    	$userInfo = $this->input->post(null,true);
+		    if( count($userInfo) ) {
+		      $this->load->model('usuario');
+		      $saved = $this->usuario->new_user($userInfo);
+		    }
+		    if ( isset($saved) && $saved ) {
+		       $this->login_user($userInfo['mail'],$userInfo['password']);
+		    }
+		}
     }
 
     function show_login( $show_error = 0 ) {
