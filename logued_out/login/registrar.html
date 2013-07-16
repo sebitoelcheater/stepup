@@ -4,6 +4,7 @@
 <!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
+  <script src="assets/javascript/gen_validatorv4.js" type="text/javascript"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Login Form</title>
@@ -14,14 +15,27 @@
   <section class="container">
     <div class="login">
       <h1>Step Up - Registro</h1>
-      <form method="post" action="registrar.html">
-        <p><input type="text" name="login" value="" placeholder="Nombre y Apellido"></p>
-        <p><input type="text" name="login" value="" placeholder="Email"></p>
+      <form method="post" action="../../" name="registro" id="login">
+        <p><input type="text" name="nombre" value="" placeholder="Nombre"></p>
+        <p><input type="text" name="apellido" value="" placeholder="Apellido"></p>
+        <p><input type="text" name="mail" value="" placeholder="Email"></p>
         <p><input type="password" name="password" value="" placeholder="Contraseña"></p>
-        <p class="remember_me">
-        </p>
-        <p class="submit"><input type="submit" name="commit" value="Registrarme"></p>
+        <input type="hidden" name="accion" value="registrar">
+        <p class="submit"><input type="submit" name="registrar" value="Registrarme"></p>
       </form>
+      <script type="text/javascript">
+        var frmvalidator  = new Validator("registro");
+        frmvalidator.addValidation("nombre","req","Por favor introduce tu nombre.");
+        frmvalidator.addValidation("nombre","maxlen=50","Tu nombre es muy largo.");
+        frmvalidator.addValidation("apellido","req","Por favor introduce tu apellido.");
+        frmvalidator.addValidation("apellido","maxlen=50","Tu apellido es muy largo.");
+        frmvalidator.addValidation("mail","req","Por favor introduce tu mail.");
+        frmvalidator.addValidation("mail","maxlen=50","Tu mail es muy largo.");
+        frmvalidator.addValidation("mail","email", "Por favor introduce un mail válido.");
+        frmvalidator.addValidation("password","req","Por favor introduce tu constraseña.");
+        frmvalidator.addValidation("password","maxlen=50","Tu contraseña es muy larga.");
+                     //where myform is the name/id of your form
+        </script>
     </div>
   </section>
 </body>
