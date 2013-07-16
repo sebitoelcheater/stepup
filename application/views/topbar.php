@@ -16,7 +16,6 @@
       <h1><a href="index.html">Bienvenido, <?=$nombre?></a></h1>
       <nav>
         <ul>
-          <li><a href="index.html" class="icon tasks">Inicio <span>3</span></a></li>
           <li class="active"><a href="index.html" class="icon messages">Comunidad <span>17</span></a></li>
           <li><a href="index.html" class="icon tasks">Entregas <span>3</span></a></li>
           <li><a href="index.html" class="icon tasks">Encuestas <span>3</span></a></li>
