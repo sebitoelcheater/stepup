@@ -30,21 +30,22 @@ class Inicio extends CI_Controller {
 		//$session_id = $this->session->userdata('session_id');
 		if($this->session->userdata('logueado'))
 			redirect('/main/show_main');
-		else if ($this->input->post('accion')=="login")
-			$this->load->view("main");
+		else if ($this->input->post('accion')=="login"){
+			$mail = $this->input->post('mail');
+			$password = $this->input->post('password');
+			$this->login_user($mail,$password);
+		}
 		else
 			$this->show_login();
 	}
 
-	function login_user() {
-
+	function login_user($mail,$password) {
         $this->load->model('usuario');
 
-        $username = $this->input->post('username');
-        $pass  = $this->input->post('password');
-
-        if($this->usuario->validate_user($username,$pass))
-            redirect('/main/show_main');
+        if($this->usuario->validate_user($mail,$password)){
+            $this->load->view("topbar");
+            $this->load->view("main");
+        }
         else
             $this->show_login(1);
     }
