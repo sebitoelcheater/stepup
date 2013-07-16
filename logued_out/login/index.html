@@ -14,7 +14,6 @@ $(document).ready(function() {
   $('input[name=commit]').click(myFunction);
 });
 function myFunction() {
- if(true){
  
         $.ajax({
             type: "POST",
@@ -45,14 +44,11 @@ function myFunction() {
             success: function( respuesta ){
               $('#msgUsuario').empty();
               if(respuesta == '1')
-                $('input[name=ticket1]').css("background","#FF4500");
+                $('input[name=mail]').css("background","#FF4500");
               else
-                $('input[name=ticket1]').css("background","#66FF00");
+                $('input[name=mail]').css("background","#66FF00");
             }
         });
-    } else {
-      $('input[name=ticket1]').css("background","white");
-    }
 }
 
 </script>
