@@ -28,9 +28,9 @@
             <OrderRandom>false</OrderRandom>
             <PageBgColor>#ffffff</PageBgColor>
             <Preloader>false</Preloader>
-            <PublishFileName>/Users/Sebito/Developer/StepUp/banner/index.html</PublishFileName>
+            <PublishFileName>/Users/Sebito/Developer/Proyectos/stepup/logued_out/banner/index.html</PublishFileName>
             <PublishIndex>index.html</PublishIndex>
-            <PublishPath>/Users/Sebito/Developer/StepUp/banner</PublishPath>
+            <PublishPath>/Users/Sebito/Developer/Proyectos/stepup/logued_out/banner</PublishPath>
             <PublishPreview>true</PublishPreview>
             <PublishType>file</PublishType>
             <RelativePath>false</RelativePath>
@@ -53,16 +53,16 @@
         </Settings>
         <Images RelativePath="false">
             <Image>
-                <url>/Users/Sebito/Developer/StepUp/Images/2naturaleza_t-7.jpg</url>
-                <title>2naturaleza_t-7</title>
+                <url>/Users/Sebito/Developer/Step/Images/engineering.jpg</url>
+                <title>engineering</title>
             </Image>
             <Image>
-                <url>/Users/Sebito/Developer/StepUp/Images/Fondo-de-pantalla-Naturaleza-103.jpg</url>
-                <title>Fondo-de-pantalla-Naturaleza-103</title>
+                <url>/Users/Sebito/Developer/Step/Images/flickr-6384294717-hd.jpg</url>
+                <title>flickr-6384294717-hd</title>
             </Image>
             <Image>
-                <url>/Users/Sebito/Developer/StepUp/Images/video-para-celulares.jpg</url>
-                <title>video-para-celulares</title>
+                <url>/Users/Sebito/Developer/Step/Images/hola.gif</url>
+                <title>hola</title>
             </Image>
         </Images>
     </Gallery>
