@@ -1,3 +1,6 @@
+<?
+$array = array('inicio'=>'Comunidad','entrega'=>'Entregas','encuesta'=>'Encuestas','configuracion'=>'Configuración');
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -16,11 +19,15 @@
       <h1><a href="index.html">Bienvenido, <?=$nombre?></a></h1>
       <nav>
         <ul>
-          <li class="active"><a href="index.html" class="icon messages">Comunidad <span>17</span></a></li>
-          <li><a href="index.html" class="icon tasks">Entregas <span>3</span></a></li>
-          <li><a href="index.html" class="icon tasks">Encuestas <span>3</span></a></li>
-          <li><a href="index.html" class="icon settings">Configuración </a></li>
-          <li><a href="index.php/inicio/logout_user">Cerrar Sesión </a></li>
+          <?
+            foreach ($array as $controlador=>$item) {
+              if ($item==$content){
+                echo '<li class="active"><a href="'.base_url()."index.php/".$controlador.'/main" class="icon messages">'.$item.'<span>17</span></a></li>';
+              } else {
+                echo '<li><a href="'.base_url()."index.php/".$controlador.'/main" class="icon tasks">'.$item.'<span>3</span></a></li>';
+              }
+            }?>
+          <li><a href="<?=base_url()?>index.php/inicio/logout_user">Cerrar Sesión </a></li>
 
         </ul>
       </nav>
