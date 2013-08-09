@@ -1,1 +1,1 @@
-<center><?=$encuestita?></center>
+<div style='margin-left: 300px;'><?=$encuestita?></div>

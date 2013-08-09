@@ -15,7 +15,7 @@
     
       <div class="first vcard" itemscope="" itemtype="http://schema.org/Person">
         <div class="avatared">
-            <span class="tooltipped downwards" original-title="Change your avatar at gravatar.com"><a href="http://gravatar.com/emails/"><img height="210" src="https://secure.gravatar.com/avatar/3ec1d80dfcc0055c885d19798ae2a85f?s=420&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="210"></a></span>
+            <span class="tooltipped downwards" original-title="Change your avatar at gravatar.com"><a href="http://gravatar.com/emails/"><img height="210" src="http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg" width="210"></a></span>
 
             <h1>
                 <span itemprop="name"><?=$nombre?> <?=$apellido?></span>
@@ -24,12 +24,12 @@
 
             <div class="details">
               <dl>
-                <dt><span class="octicon octicon-code"></span></dt><dd>Java, JavaScript, PHP</dd>
+                <!--<dt><span class="octicon octicon-code"></span></dt><dd>Java, JavaScript, PHP</dd>-->
               </dl>
-                  <dl><dt><span class="octicon octicon-organization"></span></dt><dd itemprop="worksFor">Cheaper</dd></dl>
+                  <!--<dl><dt><span class="octicon octicon-organization"></span></dt><dd itemprop="worksFor">Cheaper</dd></dl>-->
               <dl><dt><span class="octicon octicon-mail"></span></dt><dd><a class="email js-obfuscate-email" data-email="%73%65%62%61%2e%68%67%40%6d%65%2e%63%6f%6d" href="mailto:<?=$mail?>"><?=$mail?></a></dd></dl>
-              <dl><dt><span class="octicon octicon-link"></span></dt><dd itemprop="url"><a href="http://gravatar.com/sebastianelbreve" class="url" rel="nofollow me">http://gravatar.com/sebastianelbreve</a></dd></dl>
-              <dl><dt><span class="octicon octicon-clock"></span></dt><dd><span class="join-label">Joined on </span><span class="join-date">Sep 14, 2012</span></dd></dl>
+              <!--<dl><dt><span class="octicon octicon-link"></span></dt><dd itemprop="url"><a href="http://gravatar.com/sebastianelbreve" class="url" rel="nofollow me">http://gravatar.com/sebastianelbreve</a></dd></dl>-->
+              <!--<dl><dt><span class="octicon octicon-clock"></span></dt><dd><span class="join-label">Joined on </span><span class="join-date">Sep 14, 2012</span></dd></dl>-->
             </div>
         </div>
 
@@ -51,7 +51,7 @@
           </li>
           <li>
             <a href="/sebakan/following">
-              <strong>3</strong>
+              <strong>0</strong>
               <span>encuestas<br>pendientes</span>
             </a>
           </li>

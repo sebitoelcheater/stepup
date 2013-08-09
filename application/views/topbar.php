@@ -16,15 +16,15 @@ $array = array('inicio'=>'Comunidad','entrega'=>'Entregas','encuesta'=>'Encuesta
 <body>
   <header>
     <div class="container">
-      <h1><a href="index.html">Bienvenido, <?=$nombre?></a></h1>
+      <h1><a href="<?=base_url()?>index.php/perfil/main">Bienvenido, <?=$nombre?></a></h1>
       <nav>
         <ul>
           <?
             foreach ($array as $controlador=>$item) {
               if ($item==$content){
-                echo '<li class="active"><a href="'.base_url()."index.php/".$controlador.'/main" class="icon messages">'.$item.'<span>17</span></a></li>';
+                echo '<li class="active"><a href="'.base_url()."index.php/".$controlador.'/main" class="icon '.$controlador.'">'.$item.'</a></li>';
               } else {
-                echo '<li><a href="'.base_url()."index.php/".$controlador.'/main" class="icon tasks">'.$item.'<span>3</span></a></li>';
+                echo '<li><a href="'.base_url()."index.php/".$controlador.'/main" class="icon '.$controlador.'">'.$item./*<span>2</span>*/'</a></li>';
               }
             }?>
           <li><a href="<?=base_url()?>index.php/inicio/logout_user">Cerrar Sesión </a></li>

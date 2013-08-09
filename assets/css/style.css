@@ -189,14 +189,17 @@ header nav a.icon {
   background-position: 12px 11px;
   background-repeat: no-repeat;
 }
-header nav a.tasks {
-  background-image: url("../img/tasks.png");
+header nav a.encuesta {
+  background-image: url("../img/encuesta.png");
 }
-header nav a.messages {
-  background-image: url("../img/messages.png");
+header nav a.inicio {
+  background-image: url("../img/inicio.png");
 }
-header nav a.settings {
-  background-image: url("../img/settings.png");
+header nav a.configuracion {
+  background-image: url("../img/configuracion.png");
+}
+header nav a.entrega {
+  background-image: url("../img/entrega.png");
 }
 header nav li.active a, header nav a:active {
   padding-right: 16px;
