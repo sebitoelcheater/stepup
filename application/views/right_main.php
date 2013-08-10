@@ -30,7 +30,7 @@ foreach ($mensajes as $mensaje) {
                      <div class="stream-item-header">
                         <a href="swdw"><img class="avatar js-action-profile-avatar" src="https://si0.twimg.com/profile_images/1435743772/alerico_normal.jpg" alt=""></a>
                         <strong class="fullname js-action-profile-name show-popup-with-id">'.$mensaje->titulo.'</strong>
-                        <span>‏</span><span class="username js-action-profile-name"><s>@</s><b><a href="#">Aleccitico</a></b></span>
+                        <span>‏</span><span class="username js-action-profile-name"><b><a href="#">'.$usuarios[$mensaje->idU]->nombre." ".$usuarios[$mensaje->idU]->apellido.'</a></b></span>
                         </a>
                         <small class="time">
                         <a><span>26 jun</span></a>
@@ -67,13 +67,32 @@ foreach ($mensajes as $mensaje) {
                      <div class="stream-item-header">
                         <a class="account-group js-account-group js-action-profile js-user-profile-link js-nav" href="/Aleccitico" data-user-id="330854666">
                         <img class="avatar js-action-profile-avatar" src="https://si0.twimg.com/profile_images/1435743772/alerico_normal.jpg" alt="">
-                        <span>‏</span><span class="username js-action-profile-name"><s>@</s><b>Aleccitico</b></span>
+                        <span>‏</span><span class="username js-action-profile-name"><b><a href="#">'.$usuarios[$mensaje->idU]->nombre." ".$usuarios[$mensaje->idU]->apellido.'</a></b></span>
                         </a>
                         <small class="time">
                         <a href="/Aleccitico/status/349998049189298176" class="tweet-timestamp js-permalink js-nav" title="2:10 PM - 26 jun 13"><span class="_timestamp js-short-timestamp " data-time="1372281012" data-long-form="true">26 jun</span></a>
                         </small>
                      </div>
                      <p class="js-tweet-text tweet-text">'.$respuesta->respuesta.'</p>
+                     <div class="expanded-content js-tweet-details-dropdown">
+                     </div>
+                  </div>
+               </div>
+            </li>';
+              $bloque2 = '<li class="js-stream-item stream-item stream-item expanding-stream-item" data-item-id="349998049189298176" id="stream-item-tweet-349998049189298176" data-item-type="tweet">
+               <div class="tweet original-tweet js-stream-tweet js-actionable-tweet js-profile-popup-actionable js-original-tweet">
+                  <span class="icon dogear"></span>
+                  <div class="content" style="margin-left:18%; width:82%;">
+                     <div class="stream-item-header">
+                        <a href="swdw"><img class="avatar js-action-profile-avatar" src="https://si0.twimg.com/profile_images/1435743772/alerico_normal.jpg" alt=""></a>
+                        <strong class="fullname js-action-profile-name show-popup-with-id"></strong>
+                        <span>‏</span><span class="username js-action-profile-name"><b><a href="#">'.$usuarios[$mensaje->idU]->nombre." ".$usuarios[$mensaje->idU]->apellido.'</a></b></span>
+                        </a>
+                        <small class="time">
+                        <a><span>26 jun</span></a>
+                        </small>
+                     </div>
+                     <p class="js-tweet-text tweet-text">'.$mensaje->mensaje.'</p>
                      <div class="expanded-content js-tweet-details-dropdown">
                      </div>
                   </div>

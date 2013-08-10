@@ -78,6 +78,12 @@ class Inicio extends CI_Controller {
 	        $firstM = $foro['mensajes'][0]->id;
 	        $lastM = $foro['mensajes'][count($foro['mensajes'])-1]->id;
 	        $foro['respuestas'] = $this->foros->getRespuestas($firstM,$lastM);
+	        $usuarios = $this->usuario->getUsers();
+	        $users = array();
+	        foreach ($usuarios as $usuario) {
+	        	$users[$usuario->id] = $usuario;
+	        }
+	        $foro['usuarios'] = $users;
 	        $this->load->view('right_main',$foro);
 	        $this->load->view('bottom');
     	}

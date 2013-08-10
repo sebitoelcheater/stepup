@@ -32,6 +32,12 @@ class Usuario extends CI_Model {
       return $q->result();
     }
 
+    function getUsers(){
+        $this->db->from('step_usuario');
+        $this->db->select('id,nombre,apellido');
+        return $this->db->get()->result();
+    }
+
     function set_session() {
         $this->session->set_userdata( array(
           'id'=>$this->details->id,
