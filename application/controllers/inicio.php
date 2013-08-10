@@ -64,7 +64,7 @@ class Inicio extends CI_Controller {
       $this->index();
     }
 
-    function main($aviso=0,$content='Comunidad'){
+    function main($aviso=0,$content='Comunidad',$block=1){
     	if($this->session->userdata('logueado')==true){
     		$this->load->model('usuario');
 			$data = $this->usuario->fill_session_data();
@@ -72,7 +72,13 @@ class Inicio extends CI_Controller {
 			$data['aviso'] = $aviso;
 	    	$this->load->view("topbar",$data);
 	        $this->load->view("left_profile",$data);
-	        $this->load->view('right_main');
+
+	        $this->load->model('foros');
+	        $foro['mensajes'] = $this->foros->getMensajes($block,15);
+	        $firstM = $foro['mensajes'][0]->id;
+	        $lastM = $foro['mensajes'][count($foro['mensajes'])-1]->id;
+	        $foro['respuestas'] = $this->foros->getRespuestas($firstM,$lastM);
+	        $this->load->view('right_main',$foro);
 	        $this->load->view('bottom');
     	}
     	else
