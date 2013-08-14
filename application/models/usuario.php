@@ -69,4 +69,8 @@ class Usuario extends CI_Model {
 
       return $this->db->insert('step_usuario',$data);
     }
+
+    function getCurrentID(){
+      return $this->session->userdata('id');
+    }
 }
