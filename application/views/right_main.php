@@ -131,5 +131,4 @@ foreach ($mensajes as $mensaje) {
    </div>
 </div>
 </div><!-- /.last -->
-<?= $blocks?>
 
